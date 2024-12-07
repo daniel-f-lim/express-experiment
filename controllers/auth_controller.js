@@ -62,13 +62,13 @@ const handle_login = async (req, res) => {
 				secure: true,
 				maxAge: 24 * 60 * 60 * 1000
 			}); // secure: true - for https
-		res.json({
+		return res.status(200).json({
 			'message': `User ${username} successful login`,
 			access_token
 		});
 	}
 	else {
-		res.status(401).json({ 'message': `Bad username/password combination` });
+		return res.status(401).json({ 'message': `Bad username/password combination` });
 	}
 }
 
