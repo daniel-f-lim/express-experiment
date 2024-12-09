@@ -38,7 +38,7 @@ describe('/Server Login Test Collection', () => {
 		});
 	});
 
-	it('login route authenticate user', function(done) {
+	it('login route authenticate user', (done) => {
 		let data = {
 			username: 'daniel',
 			password: '12345'
